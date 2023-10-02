@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite thread-count="3" parallel="tests" name="Failed suite [Orange HRM Application]" guice-stage="DEVELOPMENT">
+  <test thread-count="3" parallel="tests" name="cross browser testing in chrome(failed)">
+    <parameter name="password" value="admin123"/>
+    <parameter name="browsername" value="chrome"/>
+    <parameter name="username" value="Admin"/>
+    <groups>
+      <run>
+        <include name="EndToEndTesting"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="TestLayer1.EmployeeSearchPage">
+        <methods>
+          <include name="searchEmployeeByName"/>
+        </methods>
+      </class> <!-- TestLayer1.EmployeeSearchPage -->
+      <class name="TestLayer1.PimPage">
+        <methods>
+          <include name="pimPageLink"/>
+          <include name="addMoreDetails"/>
+        </methods>
+      </class> <!-- TestLayer1.PimPage -->
+      <class name="TestLayer1.Homepage">
+        <methods>
+          <include name="homePagrUrl"/>
+          <include name="homePagrLogo"/>
+          <include name="homePageTitle"/>
+        </methods>
+      </class> <!-- TestLayer1.Homepage -->
+      <class name="TestLayer1.LoginPage">
+        <methods>
+          <include name="validateloginFunctionality"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- TestLayer1.LoginPage -->
+    </classes>
+  </test> <!-- cross browser testing in chrome(failed) -->
+  <test thread-count="3" parallel="tests" name="cross browser testing in edge(failed)">
+    <parameter name="password" value="admin123"/>
+    <parameter name="browsername" value="edge"/>
+    <parameter name="username" value="Admin"/>
+    <groups>
+      <run>
+        <include name="EndToEndTesting"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="TestLayer1.EmployeeSearchPage">
+        <methods>
+          <include name="searchEmployeeByName"/>
+        </methods>
+      </class> <!-- TestLayer1.EmployeeSearchPage -->
+      <class name="TestLayer1.PimPage">
+        <methods>
+          <include name="pimPageLink"/>
+          <include name="addMoreDetails"/>
+        </methods>
+      </class> <!-- TestLayer1.PimPage -->
+      <class name="TestLayer1.Homepage">
+        <methods>
+          <include name="homePagrUrl"/>
+          <include name="homePagrLogo"/>
+          <include name="homePageTitle"/>
+        </methods>
+      </class> <!-- TestLayer1.Homepage -->
+      <class name="TestLayer1.LoginPage">
+        <methods>
+          <include name="validateloginFunctionality"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- TestLayer1.LoginPage -->
+    </classes>
+  </test> <!-- cross browser testing in edge(failed) -->
+</suite> <!-- Failed suite [Orange HRM Application] -->
